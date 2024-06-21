@@ -19,7 +19,7 @@ public class ClientHandler {
             this.clients = clients;
             this.dataInputStream = new DataInputStream(socket.getInputStream());
             this.dataOutputStream = new DataOutputStream(socket.getOutputStream());
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
@@ -36,7 +36,7 @@ public class ClientHandler {
                             }
                         }
                     }
-                }catch (IOException e){
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
             }

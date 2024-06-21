@@ -12,12 +12,12 @@ import java.io.IOException;
 public class LoginFormController {
     public JFXTextField txtName;
 
-    public void initialize(){
+    public void initialize() {
 
     }
 
     public void logInButtonOnAction(ActionEvent actionEvent) throws IOException {
-        if (!txtName.getText().isEmpty()&&txtName.getText().matches("[A-Za-z0-9]+")){
+        if (!txtName.getText().isEmpty() && txtName.getText().matches("[A-Za-z0-9]+")) {
             Stage primaryStage = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/ClientForm.fxml"));
 
@@ -35,7 +35,7 @@ public class LoginFormController {
             primaryStage.show();
 
             txtName.clear();
-        }else{
+        } else {
             new Alert(Alert.AlertType.ERROR, "Please enter your name").show();
         }
     }
