@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/ServerForm.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE AnchorPane SYSTEM "ServerForm.dtd">
+
+    <AnchorPane>
+    ...
+    </AnchorPane>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT AnchorPane (children)*>
+<!ATTLIST AnchorPane
+    prefHeight CDATA #IMPLIED
+    prefWidth CDATA #IMPLIED
+    xmlns CDATA #IMPLIED
+    xmlns:fx CDATA #IMPLIED
+    fx:id CDATA #IMPLIED
+    fx:controller CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT children (JFXButton|ScrollPane|ImageView|Text)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT JFXButton (graphic)*>
+<!ATTLIST JFXButton
+    contentDisplay CDATA #IMPLIED
+    layoutX CDATA #IMPLIED
+    layoutY CDATA #IMPLIED
+    onAction CDATA #IMPLIED
+    prefHeight CDATA #IMPLIED
+    prefWidth CDATA #IMPLIED
+    text CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT graphic (ImageView)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT ImageView (image)*>
+<!ATTLIST ImageView
+    fitHeight CDATA #IMPLIED
+    fitWidth CDATA #IMPLIED
+    pickOnBounds CDATA #IMPLIED
+    preserveRatio CDATA #IMPLIED
+    layoutX CDATA #IMPLIED
+    layoutY CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT image (Image)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT Image EMPTY>
+<!ATTLIST Image
+    url CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT ScrollPane (content)*>
+<!ATTLIST ScrollPane
+    layoutX CDATA #IMPLIED
+    layoutY CDATA #IMPLIED
+    prefHeight CDATA #IMPLIED
+    prefWidth CDATA #IMPLIED
+    fx:id CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT content (VBox)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT VBox EMPTY>
+<!ATTLIST VBox
+    prefHeight CDATA #IMPLIED
+    prefWidth CDATA #IMPLIED
+    style CDATA #IMPLIED
+    fx:id CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT Text (font)*>
+<!ATTLIST Text
+    fill CDATA #IMPLIED
+    layoutX CDATA #IMPLIED
+    layoutY CDATA #IMPLIED
+    strokeType CDATA #IMPLIED
+    strokeWidth CDATA #IMPLIED
+    text CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT font (Font)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT Font EMPTY>
+<!ATTLIST Font
+    name CDATA #IMPLIED
+    size CDATA #IMPLIED
+  >
